@@ -1,0 +1,91 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navlink.active {
+    @apply text-black underline;
+}
+.action {
+    @apply rounded-xl px-6 py-3  border-2 capitalize flex items-center justify-center gap-2;
+    transition: all 0.4s;
+}
+.hero {
+    background: url("../assets/heroBg2.png") center;
+    /* background: #fafafa; */
+}
+.number {
+    @apply absolute right-0 top-8 rounded-l-xl bg-baseOrange-light px-6 py-2 text-2xl font-black text-baseWhite;
+}
+
+.step {
+    @apply max-w-80 md:max-w-96 relative flex flex-col items-center justify-center gap-4 rounded-xl bg-baseWhite p-8  min-h-[600px];
+}
+.slideLink {
+    @apply flex items-center p-4 pr-8 gap-3;
+}
+.slideLink:hover {
+    @apply bg-baseOrange-light;
+}
+.authTitle {
+    @apply my-6 md:my-0 text-center font-bold text-3xl md:text-4xl;
+}
+.stepContainer {
+    @apply relative bg-baseGray-light px-4 py-16 text-baseBlack sm:py-32 md:px-16;
+}
+.stepCurve {
+    @apply hidden;
+}
+
+.mobilelink {
+    @apply py-2 px-4 text-xl transition-all duration-300;
+}
+.mobilelink.active {
+    @apply text-baseBlack;
+}
+.mobilelink:hover {
+    @apply text-baseWhite bg-baseOrange-light;
+}
+.mobilelinkuser {
+    @apply flex items-center  gap-3  py-2 px-4 text-xl transition-all duration-300;
+}
+.mobilelinkuser.active {
+    @apply text-baseBlack;
+}
+.mobilelinkuser:hover {
+    @apply text-baseWhite bg-baseOrange-light;
+}
+
+@media screen and (min-width: 1536px) {
+    .step.top {
+        @apply mt-32;
+    }
+    .stepContainer {
+        @apply bg-white pt-4;
+    }
+    .stepCurve {
+        @apply block absolute h-[700px] bg-baseGray-light top-0  -z-0 left-0 ring-0 w-full pt-32 rounded-b-full;
+    }
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+.active\:bg-gray-50:active {
+    --tw-bg-opacity: 1;
+    background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
+.form-label {
+    @apply block text-left text-baseBlack mb-4;
+}
+
+.form-input {
+    @apply w-full outline-none border-b-2 border-b-transparent  focus:border-b-baseOrange-light px-4 py-2 transition duration-300;
+}
