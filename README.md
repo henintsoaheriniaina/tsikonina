@@ -76,9 +76,9 @@ Avant de commencer, assure-toi d'avoir les outils suivants installés sur ta mac
 7. **Ajouter un raccourci vers le répertoire de stockage dans le dossier public** :
 Pour démarrer l'application en local et rendre les fichiers accessibles, exécute la commande suivante :
 
-```bash
-php artisan storage:link
-```
+    ```bash
+    php artisan storage:link
+    ```
 
 8. **Lancer le serveur de développement** :
    Pour démarrer l'application en local, exécute :
