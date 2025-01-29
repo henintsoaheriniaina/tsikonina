@@ -9,7 +9,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', fn() => view('pages.index'))->name('index');
 Route::get('/explore', [RecipeController::class, 'index'])->name('explore');
 Route::get('/about', fn() => view('pages.about'))->name('about');
-
+Route::get('/storage-link', function () {
+    Artisan::call('storage:link');
+    return 'Storage link has been created!';
+});
 Route::middleware('guest')->group(function () {
     Route::view('/login', 'pages.auth.login')->name('login');
     Route::post('/login', [AuthController::class, 'login'])->name('login');
