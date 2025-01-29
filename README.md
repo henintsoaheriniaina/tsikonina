@@ -72,7 +72,15 @@ Avant de commencer, assure-toi d'avoir les outils suivants installés sur ta mac
     php artisan migrate
     ```
 
-7. **Lancer le serveur de développement** :
+
+7. **Ajouter un raccourci vers le répertoire de stockage dans le dossier public** :
+Pour démarrer l'application en local et rendre les fichiers accessibles, exécute la commande suivante :
+
+```bash
+php artisan storage:link
+```
+
+8. **Lancer le serveur de développement** :
    Pour démarrer l'application en local, exécute :
 
     ```bash
@@ -81,14 +89,14 @@ Avant de commencer, assure-toi d'avoir les outils suivants installés sur ta mac
 
     L'application sera disponible à l'adresse `http://localhost:8000`.
 
-8. **Compiler les assets frontend** :
+9. **Compiler les assets frontend** :
    Pour compiler les fichiers CSS et JS avec Tailwind CSS, exécute :
 
     ```bash
     pnpm run dev
     ```
 
-9. **Accéder à l'application** :
+10. **Accéder à l'application** :
    Ouvre ton navigateur et va à `http://localhost:8000`.
 
 ## Structure du projet
