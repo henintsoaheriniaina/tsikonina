@@ -55,14 +55,14 @@
                         <x-message color="red" message="{{ $message }}" />
                     @enderror
                     <div class="group relative z-0 mb-5">
-                        <input type="email" name="email" id="email"
+                        <input type="email" name="message_sender_mail" id="email"
                             class="peer block w-full appearance-none border-0 border-b-2 border-baseOrange-light/30 bg-transparent px-0 py-2.5 text-sm text-baseBlack focus:border-baseOrange-light focus:outline-none focus:ring-0"
                             placeholder=" " required />
-                        <label for="email"
+                        <label for="message_sender_mail"
                             class="absolute left-0 top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-baseOrange-light">Votre
                             email</label>
                     </div>
-                    @error('email')
+                    @error('message_sender_mail')
                         <x-message color="red" message="{{ $message }}" />
                     @enderror
                     <div class="group relative z-0 mb-5">
