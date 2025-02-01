@@ -22,13 +22,15 @@
                 ⌚ {{ $recipe->prep_time + $recipe->cook_time }} min
             </p>
         </div>
-
         <div class="flex justify-between text-sm text-gray-500">
-            <p href="{{ route('profile', $recipe->user) }}" class="hover:text-baseOrange font-semibold">
+            <a href="{{ route('profile', $recipe->user) }}" class="font-semibold hover:text-baseOrange-light">
                 {{ $recipe->user->firstname . ' ' . $recipe->user->lastname }}
-            </p>
+            </a>
             <p>Publié {{ $recipe->created_at->diffForHumans() }}</p>
         </div>
+        <a href="{{ route('recipes.show', $recipe) }}" class="flex pt-4 text-sm font-bold text-blue-600">Voir plus
+            &rightarrow;
+        </a>
     </div>
 
     <div class="h-[400px] overflow-hidden rounded-lg">
