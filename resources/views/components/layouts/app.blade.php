@@ -6,7 +6,8 @@
     <link rel="icon" href="{{ asset('images/emoji.png') }}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/jq.js'])
+    <link rel="stylesheet" href="{{ asset('build/assets/app.css') }}">
+    <script src="{{ asset('build/assets/app-CfDi4jWI.js') }}" defer></script>
     <title>{{ $title ? ucfirst($title) : 'Tsikonina' }}</title>
 </head>
 
