@@ -2,7 +2,6 @@
     {{-- top --}}
     <div class="flex h-[116px] items-center justify-between border-b-2 border-b-baseGray-light bg-baseWhite px-4">
         <x-logo />
-
         <span class="cursor-pointer text-baseOrange-light" id="mobileMenuClose">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
                 stroke="currentColor" class="size-8">

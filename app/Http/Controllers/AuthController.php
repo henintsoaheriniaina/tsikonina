@@ -13,7 +13,6 @@ class AuthController extends Controller
     {
 
         $validated = $request->validated();
-        // dd($validated);
         $token =  $request->has("remember_token");
         $user = User::create($validated);
         Auth::login($user, $token);
