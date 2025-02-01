@@ -55,11 +55,14 @@ class RecipeController extends Controller
         $fields = $request->validated();
         $fields['image_url'] = null;
         if ($request->hasFile('image_url')) {
-            $fields['image_url'] = Storage::disk('public')->put('recipes', $request->image_url);
+            $uploadedFileUrl  = cloudinary()->upload($request->file('image_url'));
+            $fields['image_url'] = $uploadedFileUrl->getSecurePath();
+            $fields['image_public_id'] = $uploadedFileUrl->getPublicId();
         }
         Auth::user()->recipes()->create($fields);
         return redirect()->route('dashboard')->with('success', 'Recette publiée avec succès');
     }
+
 
     /**
      * Display the specified resource.
@@ -86,26 +89,30 @@ class RecipeController extends Controller
      * Update the specified resource in storage.
      */
     public function update(RecipeUpdateRequest $request, string $id)
-    {
-        $recipe = Recipe::findOrFail($id);
+{
+    $recipe = Recipe::findOrFail($id);
 
-        if ($recipe->user_id !== Auth::user()->id) {
-            abort(403);
-        }
-
-        $fields = $request->validated();
-
-        if ($request->hasFile('image_url')) {
-            if ($recipe->image_url && Storage::disk('public')->exists($recipe->image_url)) {
-                Storage::disk('public')->delete($recipe->image_url);
-            }
-
-            $fields['image_url'] = Storage::disk('public')->put('recipes', $request->image_url);
-        }
-
-        $recipe->update($fields);
-        return redirect()->route('dashboard')->with('success', 'Recette modifiée avec succès');
+    // Vérification si l'utilisateur est bien le propriétaire
+    if ($recipe->user_id !== Auth::user()->id) {
+        abort(403);
     }
+
+    $fields = $request->validated();
+
+    if ($request->hasFile('image_url')) {
+        if ($recipe->image_public_id) {
+            cloudinary()->destroy($recipe->image_public_id);
+        }
+
+        $uploadedFileUrl = cloudinary()->upload($request->file('image_url'));
+        $fields['image_url'] = $uploadedFileUrl->getSecurePath();
+        $fields['image_public_id'] = $uploadedFileUrl->getPublicId();
+    }
+
+    $recipe->update($fields);
+
+    return redirect()->route('dashboard')->with('success', 'Recette modifiée avec succès');
+}
 
 
     /**
@@ -118,8 +125,8 @@ class RecipeController extends Controller
         if ($recipe->user_id !== Auth::user()->id) {
             abort(403);
         }
-        if ($recipe->image_url && Storage::disk('public')->exists($recipe->image_url)) {
-            Storage::disk('public')->delete($recipe->image_url);
+        if ($recipe->image_public_id) {
+            cloudinary()->destroy($recipe->image_public_id);
         }
         $recipe->delete();
 

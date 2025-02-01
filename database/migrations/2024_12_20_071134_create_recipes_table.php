@@ -21,6 +21,7 @@ return new class extends Migration
             $table->text('description');
             $table->longText('instructions');
             $table->string('image_url');
+            $table->string('image_public_id')->nullable();
             $table->enum('difficulty', ['easy', 'medium', 'advanced']);
             $table->timestamps();
         });

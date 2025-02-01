@@ -34,7 +34,7 @@
     </div>
 
     <div class="h-[400px] overflow-hidden rounded-lg">
-        <img src="{{ asset('storage/' . ($recipe->image_url ?: 'default-image.jpg')) }}"
-            class="h-full w-full object-cover" alt="{{ $recipe->title }}" title="{{ $recipe->title }}">
+        <x-cld-image public-id="{{ $recipe->image_public_id ?: 'default-image.jpg' }}"
+            class="h-full w-full object-cover" alt="{{ $recipe->title }}" title="{{ $recipe->title }}" />
     </div>
 </div>

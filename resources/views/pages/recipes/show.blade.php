@@ -67,11 +67,11 @@
 
                     {{-- details / image --}}
                     <div class="mx-auto h-full w-full overflow-hidden pt-12">
-                        <img src="{{ asset('storage/' . $recipe->image_url) }}"
-                            class="h-full w-full rounded-lg object-cover object-center" alt="{{ $recipe->title }}">
+                        <x-cld-image public-id="{{ $recipe->image_public_id ?: 'default-image.jpg' }}"
+                            class="h-full w-full rounded-lg object-cover object-center" alt="{{ $recipe->title }}" />
                     </div>
                 </div>
-                <div class="prose w-full rounded-lg bg-baseWhite p-6 shadow-lg">
+                <div class="w-full rounded-lg bg-baseWhite p-6 shadow-lg">
                     {!! $recipe->instructions !!}
                 </div>
             </div>

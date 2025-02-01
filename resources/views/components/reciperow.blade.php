@@ -1,8 +1,10 @@
 @props(['recipe'])
 <tr class="bg-baseWhite hover:bg-baseGray-light">
     <td class="whitespace-nowrap px-6 py-4">
-        <img src="{{ asset('storage/' . ($recipe->image_url ?: 'default-image.jpg')) }}" alt="{{ $recipe->title }}"
-            class="h-16 w-16 rounded object-cover shadow-md" />
+        <div class="h-16 w-16">
+            <x-cld-image public-id="{{ $recipe->image_public_id ?: 'default-image.jpg' }}" alt="{{ $recipe->title }}"
+                class="h-16 w-16 rounded object-cover shadow-md" />
+        </div>
     </td>
     <td class="whitespace-nowrap px-6 py-4 font-medium text-baseBlack">
         <a href="{{ route('recipes.show', $recipe) }}" class="text-baseOrange-light hover:underline">

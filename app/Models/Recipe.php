@@ -16,6 +16,7 @@ class Recipe extends Model
         "description",
         "instructions",
         "image_url",
+        "image_public_id",
         "prep_time",
         "cook_time",
         "servings",
