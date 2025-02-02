@@ -17,12 +17,12 @@
                 </svg>
             </button>
             <form id="searchForm" action="{{ route('explore') }}" method="GET"
-                class="absolute right-4 top-1/2 hidden -translate-y-1/2 transform">
+                class="absolute -right-9 top-1/2 z-50 hidden -translate-y-1/2 transform">
                 @csrf
                 <div class="flex h-full w-full items-center justify-center gap-4 rounded-xl bg-baseOrange-light p-3">
                     <div class="ml-3 flex items-center justify-center border-b-2">
                         <input type="text" name="search"
-                            class="w-60 bg-transparent py-2 pr-4 text-sm text-baseWhite placeholder:text-baseWhite/80 focus:outline-none"
+                            class="w-full bg-transparent py-2 pr-4 text-sm text-baseWhite placeholder:text-baseWhite/80 focus:outline-none"
                             placeholder="Rechercher...">
                         <button type="submit" class="p-2 text-baseWhite">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -40,7 +40,6 @@
                         </svg>
                     </button>
                 </div>
-
             </form>
         </div>
 

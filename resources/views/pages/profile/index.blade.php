@@ -1,4 +1,4 @@
-<x-layouts.app class="app" title="Profil de {{ $user->firstname . ' ' . $user->lastname }}">
+<x-layouts.app class="app" title="{{ ucfirst($user->firstname) . ' ' . ucfirst($user->lastname) }}">
     <div class="bg-baseBlack bg-hero bg-cover bg-center bg-no-repeat">
         <div class="container mx-auto px-4 py-16 text-baseWhite">
             <div class="flex flex-col items-center">

@@ -1,4 +1,4 @@
-<x-layouts.app title="explorer">
+<x-layouts.app title="Explorer">
     <div class="min-h-screen bg-baseBlack bg-hero bg-cover bg-center bg-no-repeat">
 
         <div class="container mx-auto px-4 py-16 text-baseWhite">

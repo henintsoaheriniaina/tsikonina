@@ -1,4 +1,4 @@
-<x-layouts.app title="à propos">
+<x-layouts.app title="À propos">
     <div class="min-h-screen bg-hero bg-cover bg-center bg-no-repeat py-40">
         <h1 class="text-center text-4xl font-bold text-baseWhite md:text-5xl">À propos de Tsikonina</h1>
         <div class="flex flex-col items-center justify-center">

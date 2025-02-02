@@ -55,7 +55,7 @@
                         <x-message color="red" message="{{ $message }}" />
                     @enderror
                     <div class="group relative z-0 mb-5">
-                        <input type="email" name="message_sender_mail" id="email"
+                        <input type="email" name="message_sender_mail" id="message_sender_mail"
                             class="peer block w-full appearance-none border-0 border-b-2 border-baseOrange-light/30 bg-transparent px-0 py-2.5 text-sm text-baseBlack focus:border-baseOrange-light focus:outline-none focus:ring-0"
                             placeholder=" " required />
                         <label for="message_sender_mail"

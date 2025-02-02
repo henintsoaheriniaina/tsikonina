@@ -17,9 +17,9 @@ class MessageController extends Controller
             "name.required" => "Le nom est requis.",
             "name.string" => "Le nom doit être une chaîne de caractères.",
             "name.max" => "Le nom ne peut pas dépasser 255 caractères.",
-            "email.required" => "L'email est requis.",
-            "email.email" => "Veuillez fournir une adresse email valide.",
-            "email.max" => "L'email ne peut pas dépasser 255 caractères.",
+            "message_sender_mail.required" => "L'email est requis.",
+            "message_sender_mail.email" => "Veuillez fournir une adresse email valide.",
+            "message_sender_mail.max" => "L'email ne peut pas dépasser 255 caractères.",
             "message.required" => "Le message est requis.",
             "message.string" => "Le message doit être une chaîne de caractères.",
             "message.min" => "Le message doit contenir au moins 8 caractères."

@@ -14,6 +14,7 @@ Tsikonina est une application web conçue pour permettre aux utilisateurs malgac
 -   **Frontend** : Blade (template engine de Laravel)
 -   **Styles** : Tailwind CSS
 -   **Gestion des packages** : pnpm
+-   **Gestion des assets** : cloudinary
 
 ## Prérequis
 
@@ -28,22 +29,22 @@ Avant de commencer, assure-toi d'avoir les outils suivants installés sur ta mac
 
 ### Étapes pour lancer l'application :
 
-1. **Clone le projet** :
+1.  **Clone le projet** :
 
     ```bash
     git clone https://github.com/ton-utilisateur/tsikonina.git
     cd tsikonina
     ```
 
-2. **Installe les dépendances PHP** :
-   Si tu n'as pas encore installé Composer, [installe-le ici](https://getcomposer.org/).
+2.  **Installe les dépendances PHP** :
+    Si tu n'as pas encore installé Composer, [installe-le ici](https://getcomposer.org/).
 
     ```bash
     composer install
     ```
 
-3. **Configure ton fichier `.env`** :
-   Copie le fichier `.env.example` en `.env` et configure les variables d'environnement, notamment la connexion à la base de données :
+3.  **Configure ton fichier `.env`** :
+    Copie le fichier `.env.example` en `.env` et configure les variables d'environnement, notamment la connexion à la base de données :
 
     ```bash
     cp .env.example .env
@@ -51,37 +52,36 @@ Avant de commencer, assure-toi d'avoir les outils suivants installés sur ta mac
 
     Ensuite, modifie les paramètres de la base de données dans le fichier `.env` selon ta configuration locale.
 
-4. **Génère la clé d'application Laravel** :
+4.  **Génère la clé d'application Laravel** :
 
     ```bash
     php artisan key:generate
     ```
 
-5. **Installe les dépendances frontend** :
-   Si tu n'as pas encore installé pnpm, [installe-le ici](https://pnpm.io/).
-   Ensuite, dans le répertoire du projet, exécute :
+5.  **Installe les dépendances frontend** :
+    Si tu n'as pas encore installé pnpm, [installe-le ici](https://pnpm.io/).
+    Ensuite, dans le répertoire du projet, exécute :
 
     ```bash
     pnpm install
     ```
 
-6. **Migrations de la base de données** :
-   Si tu utilises des migrations pour la base de données, exécute la commande suivante pour créer les tables nécessaires :
+6.  **Migrations de la base de données** :
+    Si tu utilises des migrations pour la base de données, exécute la commande suivante pour créer les tables nécessaires :
 
     ```bash
     php artisan migrate
     ```
 
+7.  **Ajouter un raccourci vers le répertoire de stockage dans le dossier public** :
+    Pour démarrer l'application en local et rendre les fichiers accessibles, exécute la commande suivante :
 
-7. **Ajouter un raccourci vers le répertoire de stockage dans le dossier public** :
-Pour démarrer l'application en local et rendre les fichiers accessibles, exécute la commande suivante :
+        ```bash
+        php artisan storage:link
+        ```
 
-    ```bash
-    php artisan storage:link
-    ```
-
-8. **Lancer le serveur de développement** :
-   Pour démarrer l'application en local, exécute :
+8.  **Lancer le serveur de développement** :
+    Pour démarrer l'application en local, exécute :
 
     ```bash
     php artisan serve
@@ -89,15 +89,15 @@ Pour démarrer l'application en local et rendre les fichiers accessibles, exécu
 
     L'application sera disponible à l'adresse `http://localhost:8000`.
 
-9. **Compiler les assets frontend** :
-   Pour compiler les fichiers CSS et JS avec Tailwind CSS, exécute :
+9.  **Compiler les assets frontend** :
+    Pour compiler les fichiers CSS et JS avec Tailwind CSS, exécute :
 
     ```bash
     pnpm run dev
     ```
 
 10. **Accéder à l'application** :
-   Ouvre ton navigateur et va à `http://localhost:8000`.
+    Ouvre ton navigateur et va à `http://localhost:8000`.
 
 ## Structure du projet
 

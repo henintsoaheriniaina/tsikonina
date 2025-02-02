@@ -165,7 +165,7 @@
                     @enderror
                     <div class="mt-8 flex items-center gap-8">
                         <button type="button" @click="submit"
-                            class="rounded-lg bg-baseOrange-light px-5 py-2.5 text-center text-sm font-medium text-white transition-all duration-300 hover:bg-baseOrange-dark focus:outline-none">Ajouter</button>
+                            class="rounded-lg bg-baseOrange-light px-5 py-2.5 text-center text-sm font-medium text-white transition-all duration-300 hover:bg-baseOrange-dark focus:outline-none">Enregistrer</button>
                     </div>
                 </form>
             </div>

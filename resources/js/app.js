@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
             element.style.display = "block";
             element.style.width = "0px";
             element.style.transition = `width ${duration}ms ease-in-out`;
-            setTimeout(() => (element.style.width = "auto"), 10);
+            setTimeout(() => (element.style.width = "300px"), 10);
         } else {
             element.style.width = element.offsetWidth + "px";
             element.style.transition = `width ${duration}ms ease-in-out`;

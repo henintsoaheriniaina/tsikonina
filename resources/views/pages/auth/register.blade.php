@@ -1,4 +1,4 @@
-<x-layouts.app title="s'inscrire">
+<x-layouts.app title="S'inscrire">
     <div class="bg-hero text-baseWhite">
         <div class="mx-auto flex min-h-[90vh] max-w-md flex-col items-center justify-center gap-16 px-8 py-8">
             <div class="flex w-full flex-col items-center justify-center gap-8">

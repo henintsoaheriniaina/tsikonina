@@ -4,7 +4,7 @@
         <div class="flex max-w-[700px] flex-col items-center justify-center gap-8 md:w-1/2 md:items-start">
             <h1 class="text-center font-sand text-4xl font-bold sm:text-5xl md:text-left">Les Saveurs de Madagascar à
                 Votre Table</h1>
-            <p class="text-center md:text-left"> l'espace où vous pouvez non seulement explorer la richesse de la cuisine
+            <p class="text-center md:text-left">L'espace où vous pouvez non seulement explorer la richesse de la cuisine
                 malgache, mais aussi partager vos propres recettes et transmettre votre passion culinaire. 🇲🇬</p>
             <div class="flex gap-8">
                 <a href={{ route('explore') }}

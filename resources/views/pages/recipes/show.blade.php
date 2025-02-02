@@ -1,4 +1,4 @@
-<x-layouts.app class="app" title="{{ $recipe->title }}">
+<x-layouts.app class="app" title="{{ ucfirst($recipe->title) }}">
     <div class="bg-hero bg-cover bg-center bg-no-repeat">
         <div class="px-4 py-16 backdrop-blur-sm">
             <div
@@ -72,7 +72,9 @@
                     </div>
                 </div>
                 <div class="w-full rounded-lg bg-baseWhite p-6 shadow-lg">
-                    {!! $recipe->instructions !!}
+                    <div class="prose" style="width: 100%">
+                        {!! $recipe->instructions !!}
+                    </div>
                 </div>
             </div>
         </div>

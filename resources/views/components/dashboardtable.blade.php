@@ -19,7 +19,7 @@
             @empty
                 <tr>
                     <td colspan="7" class="px-6 py-4 text-center text-baseGray-dark">
-                        Aucun recette trouvée.
+                        Aucune recette trouvée.
                     </td>
                 </tr>
             @endforelse
