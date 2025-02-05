@@ -32,7 +32,7 @@ Avant de commencer, assure-toi d'avoir les outils suivants installés sur ta mac
 1.  **Clone le projet** :
 
     ```bash
-    git clone https://github.com/ton-utilisateur/tsikonina.git
+    git clone https://github.com/henintsoaheriniaina/tsikonina.git
     cd tsikonina
     ```
 
